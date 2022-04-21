@@ -1,27 +1,22 @@
-# HospitalListHandler
+# HospitalGestor
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
+Este proyecto tiene la principal finalidad de crear una SPA en Angular, el cual gestione una TO-DO list (CRUD).
 
-## Development server
+Asimismo, otros objetivos fundamentales del mismo es el estudio del uso de componentes anidados, servicios, enrutamiento y navegación en Angular, los cuales se encuentran presentes en este proyecto.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Para ello, se ha decidido desarrollar una aplicación que pretende simular la gestión de un hospital, en donde se han creado los siguientes componentes:
 
-## Code scaffolding
+- About: Muestra en una página la información general del hospital.
+- Create-Patient: Muestra un formulario para la creación de un nuevo paciente.
+- Home: Muestra la página de inicio del hospital.
+- Modify-patient: Muestra un formulario con los datos del paciente seleccionado para modificar el mismo.
+- Pagenotfound: Muestra una página de error en caso de que la ruta introducida no sea correcta.
+- Patient-detail: Muestra los detalles de un paciente cuando este es seleccionado.
+- Patients: Muestra una tabla con los pacientes existentes en el hospital, la cual permite ver en detalle, modificar y borrar los mismos.
+- Specialties: Muestra una página que permite observar las especialidades más destacadas del hospital.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Igualmente, se han creado rutas, servicios e interfaces que facilitan la comunicación entre los distintos componentes.
 
-## Build
+El URL de la aplicación desplegada es el siguiente: https://juanjobs00.github.io/hospital-gestor/
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+¡Espero que te guste!
