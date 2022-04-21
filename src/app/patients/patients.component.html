@@ -1,0 +1,83 @@
+<app-patient-detail *ngIf ="idChosen > -1" [id]="idChosen" (flag) = "closeDetails($event)"></app-patient-detail>
+
+<h4 *ngIf ="idChosen == -1">La lista de pacientes existentes en el Hospital es la siguiente</h4>
+
+<div id="table_background">
+  
+    <table *ngIf ="idChosen == -1" id="table" [dataSource]= "patientlist" mat-table class="mat-elevation-z8">
+    
+      <!-- Id Column -->
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Id </th>
+        <td mat-cell *matCellDef="let patient"> {{patient.id}} </td>
+    </ng-container>
+    
+    <!-- Nombre Column -->
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let patient"> {{patient.nombre}} </td>
+    </ng-container>
+  
+    <!-- Apellidos Column -->
+    <ng-container matColumnDef="apellidos">
+      <th mat-header-cell *matHeaderCellDef> Apellidos</th>
+      <td mat-cell *matCellDef="let patient"> {{patient.apellidos}} </td>
+    </ng-container>
+  
+    <!-- Teléfono Column -->
+    <ng-container matColumnDef="telefono">
+      <th mat-header-cell *matHeaderCellDef> Teléfono </th>
+      <td mat-cell *matCellDef="let patient"> {{patient.telefono}} </td>
+    </ng-container>
+  
+    <!-- DNI Column -->
+    <ng-container matColumnDef="dni">
+      <th mat-header-cell *matHeaderCellDef> DNI </th>
+      <td mat-cell *matCellDef="let patient"> {{patient.dni}} </td>
+    </ng-container>
+  
+    <!-- Tarjeta Sanitaria Column -->
+    <ng-container matColumnDef="tarjetaSanitaria">
+      <th mat-header-cell *matHeaderCellDef> Tarjeta Sanitaria </th>
+      <td mat-cell *matCellDef="let patient"> {{patient.tarjetaSanitaria}} </td>
+    </ng-container>
+  
+    <!-- Enfermedad Column -->
+    <ng-container matColumnDef="enfermedad">
+      <th mat-header-cell *matHeaderCellDef> Enfermedad </th>
+      <td mat-cell *matCellDef="let patient"> {{patient.enfermedad}} </td>
+    </ng-container>
+
+    <!-- View Detail Column -->
+    <ng-container matColumnDef="detalles">
+        <th mat-header-cell *matHeaderCellDef>Ver detalles</th>
+        <td mat-cell *matCellDef="let patient"> <button mat-raised-button color="accent" (click)="watchPatientDetails(patient.id)">Ver detalles</button> </td>
+    </ng-container>
+  
+    <!-- Edit Column -->
+    <ng-container matColumnDef="editar">
+        <th mat-header-cell *matHeaderCellDef> Editar</th>
+        <td mat-cell *matCellDef="let patient"> <button mat-raised-button color="accent" (click)="updatePatient(patient.id)">Editar</button> </td>
+    </ng-container>
+  
+    <!-- Delete Column -->
+    <ng-container matColumnDef="eliminar">
+        <th mat-header-cell *matHeaderCellDef> Eliminar</th>
+        <td mat-cell *matCellDef="let patient"> <button mat-raised-button color="warn" (click)="removePatient(patient.id)">Eliminar</button> </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="tableColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: tableColumns;"></tr>
+    </table>
+  
+  </div>
+
+  <br><h4>¿Desea añadir un nuevo paciente? Hágalo aquí</h4><br>
+  <div class="add_patient_div">
+    <button id ="add_patient" mat-raised-button color="primary" (click)="createPatient()">Ir a añadir paciente</button>
+  </div>
+  
+
+
+  
+

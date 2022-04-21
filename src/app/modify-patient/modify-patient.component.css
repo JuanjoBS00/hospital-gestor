@@ -1,0 +1,19 @@
+h3{
+    color: rgb(0, 53, 18);
+}
+
+.example-full-width{
+    width: 100%;
+}
+
+#send_button{
+    text-align: center;
+    margin: auto;
+}
+
+.form_layout{
+    margin-left:2%;
+    margin-right: 2%;
+    background-color: lightblue;
+}
+

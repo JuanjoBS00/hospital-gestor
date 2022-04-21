@@ -1,0 +1,42 @@
+
+<div class="form_layout">
+  <h3>Añada los datos del nuevo paciente</h3>
+    <table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput [(ngModel)]="patient.nombre" name="nombre">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Apellidos</mat-label>
+      <input matInput [(ngModel)]="patient.apellidos" name="apellidos">
+    </mat-form-field></td>
+  </tr></table>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Teléfono</mat-label>
+      <span matPrefix>+34 &nbsp;</span>
+      <input type="tel" matInput placeholder="928112233" [(ngModel)]="patient.telefono" name="telefono">
+    </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>DNI</mat-label>
+    <input matInput #dni maxlength="9" placeholder="Ej. 45377731K" [(ngModel)]="patient.dni" name="dni">
+    <mat-hint align="end">{{dni.value.length}} / 9</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Número de tarjeta sanitaria</mat-label>
+    <input matInput #sanitaryCode maxlength="16" placeholder="Ej. BGKX004499816015" [(ngModel)]="patient.tarjetaSanitaria" name="tarjetaSanitaria"> 
+    <mat-hint align="end">{{sanitaryCode.value.length}} / 16</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Enfermedad</mat-label>
+    <input matInput [(ngModel)]="patient.enfermedad" name="enfermedad">
+  </mat-form-field>
+
+  <div id="send_button">
+    <button mat-raised-button color="accent" (click)="addPatient()"> Añadir paciente</button>
+  </div>
+  
+</div>

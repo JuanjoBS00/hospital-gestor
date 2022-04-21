@@ -1,0 +1,15 @@
+<br>
+<div class="patient_detail_div">
+    <h1>Los detalles del paciente seleccionado son los siguientes: </h1><br>
+    <h3>Identificador del paciente: {{id}}</h3><br>
+    <h3>Nombre: {{patient.nombre}}</h3><br>
+    <h3>Apellidos: {{patient.apellidos}}</h3><br>
+    <h3>Teléfono: {{patient.telefono}}</h3><br>
+    <h3>DNI: {{patient.dni}}</h3><br>
+    <h3>Número de Tarjeta Sanitaria: {{patient.tarjetaSanitaria}}</h3><br>
+    <h3>Enfermedad: {{patient.enfermedad}}</h3><br>
+    <div class="patient_button_div">
+        <button id ="close_details" mat-raised-button color="primary" (click)="closeOrder()">Cerrar detalles</button>
+    </div>
+
+</div>

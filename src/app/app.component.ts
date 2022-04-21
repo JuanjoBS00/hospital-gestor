@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'hospital-list-handler';
+  title = 'Hospital BuenaSalud';
+  subtitle = 'La salud siempre es lo más importante para nosotros';
 }

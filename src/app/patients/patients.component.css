@@ -1,0 +1,16 @@
+#table{
+    width: 100%;
+}
+
+#table_background{
+    background: lightblue;
+}
+
+h4{
+    color: rgb(0, 77, 13);
+    margin-left: 3%;
+}
+
+.add_patient_div{
+    text-align: center;
+}

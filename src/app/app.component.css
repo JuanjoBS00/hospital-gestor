@@ -1,0 +1,47 @@
+h1{
+  color: rgb(0, 53, 18);
+  text-align: center;
+}
+
+#hospital_header{
+  padding: 10px;
+  text-align: center;
+  background: lightblue;
+  color: rgb(0, 53, 18);
+  font-size: 20px;
+  margin-bottom: 2%;
+  width: 100%;
+}
+
+.img_logo{
+  width: 7%;
+}
+
+.nav_title{
+  text-align: center; 
+}
+
+.links{
+  text-align: center;
+}
+
+/* Navigation link styles */
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+nav a:visited, a:link {
+  color: #607D8B;
+}
+nav a:hover {
+  color: rgb(0, 53, 18);
+  background-color: #CFD8DC;
+}
+nav a.active {
+  color: rgb(0, 53, 18);
+}
+
