@@ -17,6 +17,6 @@ Para ello, se ha decidido desarrollar una aplicación que pretende simular la ge
 
 Igualmente, se han creado rutas, servicios e interfaces que facilitan la comunicación entre los distintos componentes.
 
-El URL de la aplicación desplegada es el siguiente: https://juanjobs00.github.io/hospital-gestor/
+La URL de la aplicación desplegada es el siguiente: https://juanjobs00.github.io/hospital-gestor/
 
 ¡Espero que te guste!
